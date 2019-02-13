@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NetGram.Data;
 
 namespace NetGram.Migrations
 {
     [DbContext(typeof(NetGramDBContext))]
-    partial class NetGramDBContextModelSnapshot : ModelSnapshot
+    [Migration("20190213200311_seededdata")]
+    partial class seededdata
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
