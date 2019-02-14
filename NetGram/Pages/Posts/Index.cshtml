@@ -1,0 +1,17 @@
+﻿@page "{id}"
+@model NetGram.Pages.Posts.IndexModel
+@{
+}
+<a asp-page="/Index">Home</a>
+<div>
+    <label asp-for="Post.Title"></label>
+    <label asp-for="Post.Title">@Model.Post.Title</label>
+
+    <label asp-for="Post.Author"></label>
+    <label asp-for="Post.Author">@Model.Post.Author</label>
+
+    <label asp-for="Post.Description"></label>
+    <label asp-for="Post.Description">@Model.Post.Description</label>
+
+    <a asp-page="/Posts/Manage" asp-route-id="@Model.Post.ID">EDIT</a>
+</div>

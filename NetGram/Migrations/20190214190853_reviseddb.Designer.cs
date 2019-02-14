@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NetGram.Data;
 
 namespace NetGram.Migrations
 {
     [DbContext(typeof(NetGramDBContext))]
-    partial class NetGramDBContextModelSnapshot : ModelSnapshot
+    [Migration("20190214190853_reviseddb")]
+    partial class reviseddb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,40 +44,35 @@ namespace NetGram.Migrations
                             ID = 1,
                             Author = "Bob Smith",
                             Description = "a really cool description",
-                            ImageURL = "tempImage.jpg",
-                            Title = "Creative Title 1"
+                            ImageURL = "tempImage.jpg"
                         },
                         new
                         {
                             ID = 2,
                             Author = "Sally Smith",
                             Description = "a not cool description",
-                            ImageURL = "tempImage2.jpg",
-                            Title = "Creative Title 2"
+                            ImageURL = "tempImage2.jpg"
                         },
                         new
                         {
                             ID = 3,
                             Author = "John Smith",
                             Description = "a lame description",
-                            ImageURL = "tempImage3.jpg",
-                            Title = "Creative Title 3"
+                            ImageURL = "tempImage3.jpg"
                         },
                         new
                         {
                             ID = 4,
                             Author = "Jane Smith",
                             Description = "just a description",
-                            ImageURL = "tempImage4.jpg",
-                            Title = "Creative Title 4"
+                            ImageURL = "tempImage4.jpg"
                         },
                         new
                         {
                             ID = 5,
                             Author = "Billy Smith",
                             Description = "a secret description that if I tell you I have to k*** you ;)",
-                            ImageURL = "tempImage5.jpg",
-                            Title = "Creative Title 5"
+                            ImageURL = "tempImage5.jpg"
                         });
                 });
 #pragma warning restore 612, 618

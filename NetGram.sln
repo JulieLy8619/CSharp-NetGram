@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetGram", "NetGram\NetGram.csproj", "{0B9F7D14-E3B1-42ED-BA6A-F3218BB89F71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetGram", "NetGram\NetGram.csproj", "{0B9F7D14-E3B1-42ED-BA6A-F3218BB89F71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,23 @@
+﻿@page "{id?}"
+@model NetGram.Pages.Posts.ManageModel
+@{
+}
+
+<a asp-page="/Index">Home</a>
+<h1>Manage the Posts</h1>
+<form method="post">
+    <label asp-for="Post.Title"></label>
+    <input asp-for="Post.Title" />
+
+    <label asp-for="Post.Author"></label>
+    <input asp-for="Post.Author" />
+
+    <label asp-for="Post.Description"></label>
+    <textarea rows="5" asp-for="Post.Description"></textarea>
+
+    <label asp-for="Post.ImageURL"></label>
+    <textarea rows="5" asp-for="Post.ImageURL"></textarea>
+
+    <button type="submit">Save</button>
+    <button type="submit" asp-page-handler="Delete">DELETE</button>
+</form>
