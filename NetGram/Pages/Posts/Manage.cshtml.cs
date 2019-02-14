@@ -9,21 +9,28 @@ using NetGram.Models.Interfaces;
 
 namespace NetGram.Pages.Posts
 {
-    public class IndexModel : PageModel
+    public class ManageModel : PageModel
     {
         private readonly INetGram _netgram;
 
-        public IndexModel(INetGram netgram)
+        public ManageModel(INetGram netgram)
         {
             _netgram = netgram;
         }
         [FromRoute]
         public int ID { get; set; }
+
+        [BindProperty]
         public Post Post { get; set; }
 
-        public async void OnGet()
+        public async Task OnGet()
         {
             Post = await _netgram.FindPosts(ID);
+        }
+        public async Task<IActionResult> OnPost()
+        {
+            await _netgram.Save(Post);
+            return RedirectToPage("/Posts/Index", ID);
         }
     }
 }

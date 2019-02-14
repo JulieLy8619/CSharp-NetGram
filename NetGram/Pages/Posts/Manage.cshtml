@@ -1,0 +1,14 @@
+﻿@page "{id?}"
+@model NetGram.Pages.Posts.ManageModel
+@{
+}
+
+<h1>Manage the Posts</h1>
+<form>
+    <label asp-for="Post.Title"></label>
+    <input asp-for="Post.Title" />
+
+    <label asp-for="Post.Description"></label>
+    <textarea rows="5" asp-for="Post.Title"></textarea>
+    <button type="submit">Save</button>
+</form>
