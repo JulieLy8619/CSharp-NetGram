@@ -9,9 +9,10 @@
 
 @foreach (var item in netGramPosts)
 {
+    <img src="@item.ImageURL" alt="@item.Title" />
+    <a asp-page="/Posts/Index" asp-route-id="@item.ID">@item.Title</a>
     <p>@item.Author</p>
     <p>@item.Description</p>
-    <a asp-page="/Posts/Index" asp-route-id="@item.ID">@item.Title</a>
 }
 
 <a asp-page="/Posts/Manage">Manage</a>
