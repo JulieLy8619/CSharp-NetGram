@@ -12,4 +12,6 @@
 
     <label asp-for="Post.Description"></label>
     <label asp-for="Post.Description">@Model.Post.Description</label>
+
+    <a asp-page="/Posts/Manage" asp-route-id="@Model.Post.ID">EDIT</a>
 </div>

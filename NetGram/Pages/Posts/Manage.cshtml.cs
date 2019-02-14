@@ -30,6 +30,12 @@ namespace NetGram.Pages.Posts
         public async Task<IActionResult> OnPost()
         {
             var tempPost = await _netgram.FindPosts(ID.GetValueOrDefault()) ?? new Post();
+
+            tempPost.Title = Post.Title;
+            tempPost.Author = Post.Author;
+            tempPost.Description = Post.Description;
+            tempPost.ImageURL = Post.ImageURL;
+
             await _netgram.Save(tempPost);
             return RedirectToPage("/Posts/Index", new { id = tempPost.ID});
         }
