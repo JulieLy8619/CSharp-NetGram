@@ -18,19 +18,26 @@ namespace NetGram.Pages.Posts
             _netgram = netgram;
         }
         [FromRoute]
-        public int ID { get; set; }
+        public int? ID { get; set; }
 
         [BindProperty]
         public Post Post { get; set; }
 
         public async Task OnGet()
         {
-            Post = await _netgram.FindPosts(ID);
+            Post = await _netgram.FindPosts(ID.GetValueOrDefault()) ?? new Post();
         }
         public async Task<IActionResult> OnPost()
         {
-            await _netgram.Save(Post);
-            return RedirectToPage("/Posts/Index", ID);
+            var tempPost = await _netgram.FindPosts(ID.GetValueOrDefault()) ?? new Post();
+            await _netgram.Save(tempPost);
+            return RedirectToPage("/Posts/Index", new { id = tempPost.ID});
+        }
+
+        public async Task<IActionResult> OnPostDelete()
+        {
+            await _netgram.Delete(ID.Value);
+            return RedirectToPage("/Index");
         }
     }
 }

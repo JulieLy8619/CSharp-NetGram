@@ -8,7 +8,11 @@
     <label asp-for="Post.Title"></label>
     <input asp-for="Post.Title" />
 
+    <label asp-for="Post.Author"></label>
+    <input asp-for="Post.Author" />
+
     <label asp-for="Post.Description"></label>
-    <textarea rows="5" asp-for="Post.Title"></textarea>
+    <textarea rows="5" asp-for="Post.Description"></textarea>
     <button type="submit">Save</button>
+    <button type="submit" asp-page-handler="Delete">DELETE</button>
 </form>
