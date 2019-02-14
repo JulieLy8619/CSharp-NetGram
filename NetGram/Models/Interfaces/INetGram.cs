@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace NetGram.Models.Interfaces
 {
-    interface INetGram
+    public interface INetGram
     {
         //delete
         Task Delete(int id);

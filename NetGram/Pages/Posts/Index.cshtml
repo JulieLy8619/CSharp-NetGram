@@ -1,0 +1,12 @@
+﻿@page "{id}"
+@model NetGram.Pages.Posts.IndexModel
+@{
+}
+
+<div>
+    <label asp-for="Post.Author"></label>
+    <label asp-for="Post.Author">@Model.Post.Author</label>
+
+    <label asp-for="Post.Description"></label>
+    <label asp-for="Post.Description">@Model.Post.Description</label>
+</div>

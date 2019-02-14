@@ -1,4 +1,15 @@
 ﻿@page
+@using NetGram.Models.Interfaces
     
+@inject INetGram NetGramInjection
 
-Hello World
+@{
+    var netGramPosts = await NetGramInjection.GetAllPosts();
+}
+
+@foreach (var item in netGramPosts)
+{
+    <p>@item.Author</p>
+    <p>@item.Description</p>
+    <a asp-page="/Posts/Index" asp-route-id="@item.ID">@item.Author</a>
+}

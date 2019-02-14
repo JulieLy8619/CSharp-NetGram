@@ -1,6 +1,10 @@
 # Lab14_15-NetGram
 
 <!--
+time tracking for submission: 
+10-1:30 wednesday
+945- thursday
+
 Your README should contain:
 
 Introduction to the app (3 -5 sentences)
