@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+//REMINDER to self to add "connection strings" for Blob related things to Azure Portal App Setting
+
 namespace NetGram.Models.Utility
 {
     public class Blob
