@@ -9,8 +9,8 @@ using NetGram.Data;
 namespace NetGram.Migrations
 {
     [DbContext(typeof(NetGramDBContext))]
-    [Migration("20190213200311_seededdata")]
-    partial class seededdata
+    [Migration("20190215032636_rebuilddb9")]
+    partial class rebuilddb9
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -32,6 +32,8 @@ namespace NetGram.Migrations
 
                     b.Property<string>("ImageURL");
 
+                    b.Property<string>("Title");
+
                     b.HasKey("ID");
 
                     b.ToTable("PostsTable");
@@ -42,35 +44,40 @@ namespace NetGram.Migrations
                             ID = 1,
                             Author = "Bob Smith",
                             Description = "a really cool description",
-                            ImageURL = "tempImage.jpg"
+                            ImageURL = "tempImage.jpg",
+                            Title = "Creative Title 1"
                         },
                         new
                         {
                             ID = 2,
                             Author = "Sally Smith",
                             Description = "a not cool description",
-                            ImageURL = "tempImage2.jpg"
+                            ImageURL = "tempImage2.jpg",
+                            Title = "Creative Title 2"
                         },
                         new
                         {
                             ID = 3,
                             Author = "John Smith",
                             Description = "a lame description",
-                            ImageURL = "tempImage3.jpg"
+                            ImageURL = "tempImage3.jpg",
+                            Title = "Creative Title 3"
                         },
                         new
                         {
                             ID = 4,
                             Author = "Jane Smith",
                             Description = "just a description",
-                            ImageURL = "tempImage4.jpg"
+                            ImageURL = "tempImage4.jpg",
+                            Title = "Creative Title 4"
                         },
                         new
                         {
                             ID = 5,
                             Author = "Billy Smith",
                             Description = "a secret description that if I tell you I have to k*** you ;)",
-                            ImageURL = "tempImage5.jpg"
+                            ImageURL = "tempImage5.jpg",
+                            Title = "Creative Title 5"
                         });
                 });
 #pragma warning restore 612, 618

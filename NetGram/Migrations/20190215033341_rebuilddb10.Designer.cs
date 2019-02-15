@@ -9,8 +9,8 @@ using NetGram.Data;
 namespace NetGram.Migrations
 {
     [DbContext(typeof(NetGramDBContext))]
-    [Migration("20190214193146_reviseddb2")]
-    partial class reviseddb2
+    [Migration("20190215033341_rebuilddb10")]
+    partial class rebuilddb10
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

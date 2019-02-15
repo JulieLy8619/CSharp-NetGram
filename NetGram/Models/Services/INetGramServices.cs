@@ -24,6 +24,10 @@ namespace NetGram.Models.Services
                 _context.Remove(post);
                 await _context.SaveChangesAsync();
             }
+
+            //Post delPost = _context.PostsTable.FirstOrDefault(p => p.ID == id);
+            //_context.PostsTable.Remove(delPost);
+            //await _context.SaveChangesAsync();
         }
 
         public async Task<Post> FindPosts(int id)

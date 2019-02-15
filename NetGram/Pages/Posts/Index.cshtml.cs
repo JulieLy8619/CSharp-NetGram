@@ -18,6 +18,7 @@ namespace NetGram.Pages.Posts
             _netgram = netgram;
         }
         [FromRoute]
+        //[BindProperty(SupportsGet =true)]
         public int ID { get; set; }
         public Post Post { get; set; }
 

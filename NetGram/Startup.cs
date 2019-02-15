@@ -29,6 +29,8 @@ namespace NetGram
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            //services.AddDbContext<NetGramDBContext>(options =>
+            //        options.UseSqlServer(Configuration[("ConnectionStrings:ProductionConnection")]));
             services.AddDbContext<NetGramDBContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("ProductionConnection")));
             services.AddScoped<INetGram, INetGramServices> ();

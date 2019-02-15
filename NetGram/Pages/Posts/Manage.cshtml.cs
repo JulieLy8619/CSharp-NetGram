@@ -21,7 +21,7 @@ namespace NetGram.Pages.Posts
         public ManageModel(INetGram netgram, IConfiguration configuaton)
         {
             _netgram = netgram;
-            BlobImg = new Blob();
+            BlobImg = new Blob(configuaton);
         }
         [FromRoute]
         public int? ID { get; set; }
@@ -55,7 +55,7 @@ namespace NetGram.Pages.Posts
                     await Image.CopyToAsync(stream);
                 }
 
-                var container = await BlobImg.GetContainer("");//need my container name I create on azure to go in the quotes
+                var container = await BlobImg.GetContainer("NetGramImagesContainer");
 
                 BlobImg.AddBlob(Image.FileName, container, filePath);
 
