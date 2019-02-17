@@ -1,5 +1,5 @@
 # Lab14_15-NetGram
-We were asked to create a website similar to InstaGram, where a user could add/update Post. A Post includes an image, the author or username, and a description.
+We were asked to create a website similar to InstaGram, where a user could add/update/delete a Post. A Post includes an image, the author or username, and a description.
 
 You can find my application at: https://jlynetgram2.azurewebsites.net
 
@@ -22,9 +22,10 @@ I utilized the following technogies:
 - Azure Blob (to store images)
 - Azure Application (to deploy the site)
 - VS Xunit (for testing)
+![tests](./images/netgramTests.JPG)
 
 ## Recognition
-Used Pixabay for all images on my site
+Used Pixabay for all images on my site: https://pixabay.com/en/
 
 
 <!--
