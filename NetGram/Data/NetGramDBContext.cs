@@ -22,7 +22,7 @@ namespace NetGram.Data
                     Title = "Creative Title 1",
                     Author = "Bob Smith",
                     Description = "a really cool description",
-                    ImageURL = "tempImage.jpg"
+                    ImageURL = "~/butterfly.jpg"
                 },
                 new Post
                 {

@@ -6,6 +6,7 @@ time tracking for submission:
 10-1:30 wednesday
 945- 200 thursday
 5:30-8:30 thrusday
+430 to  saturday, this was on and off cuz of chats
 
 Your README should contain:
 
@@ -24,6 +25,6 @@ we tried deleting and starting over the DB 3 times including removing and creati
 currently on deployed production i can get to my landing main page but I can't venture outside of it (like click to view details of one of the items)
 
 
-
+used pixabay for all images
 -->
 
