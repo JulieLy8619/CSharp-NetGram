@@ -9,14 +9,14 @@ using NetGram.Data;
 namespace NetGram.Migrations
 {
     [DbContext(typeof(NetGramDBContext))]
-    [Migration("20190213200311_seededdata")]
-    partial class seededdata
+    [Migration("20190217060543_021619rebuild1")]
+    partial class _021619rebuild1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.0-rtm-35687")
+                .HasAnnotation("ProductVersion", "2.2.2-servicing-10034")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -32,6 +32,8 @@ namespace NetGram.Migrations
 
                     b.Property<string>("ImageURL");
 
+                    b.Property<string>("Title");
+
                     b.HasKey("ID");
 
                     b.ToTable("PostsTable");
@@ -42,35 +44,40 @@ namespace NetGram.Migrations
                             ID = 1,
                             Author = "Bob Smith",
                             Description = "a really cool description",
-                            ImageURL = "tempImage.jpg"
+                            ImageURL = "~/butterfly.jpg",
+                            Title = "Creative Title 1"
                         },
                         new
                         {
                             ID = 2,
                             Author = "Sally Smith",
                             Description = "a not cool description",
-                            ImageURL = "tempImage2.jpg"
+                            ImageURL = "~/gummybears.jpg",
+                            Title = "Creative Title 2"
                         },
                         new
                         {
                             ID = 3,
                             Author = "John Smith",
                             Description = "a lame description",
-                            ImageURL = "tempImage3.jpg"
+                            ImageURL = "~/leaf.jpg",
+                            Title = "Creative Title 3"
                         },
                         new
                         {
                             ID = 4,
                             Author = "Jane Smith",
                             Description = "just a description",
-                            ImageURL = "tempImage4.jpg"
+                            ImageURL = "~/station.jpg",
+                            Title = "Creative Title 4"
                         },
                         new
                         {
                             ID = 5,
                             Author = "Billy Smith",
                             Description = "a secret description that if I tell you I have to k*** you ;)",
-                            ImageURL = "tempImage5.jpg"
+                            ImageURL = "~/fairy.jpg",
+                            Title = "Creative Title 5"
                         });
                 });
 #pragma warning restore 612, 618

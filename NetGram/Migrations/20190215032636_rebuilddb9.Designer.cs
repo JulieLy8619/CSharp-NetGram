@@ -2,19 +2,21 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NetGram.Data;
 
 namespace NetGram.Migrations
 {
     [DbContext(typeof(NetGramDBContext))]
-    partial class NetGramDBContextModelSnapshot : ModelSnapshot
+    [Migration("20190215032636_rebuilddb9")]
+    partial class rebuilddb9
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.2-servicing-10034")
+                .HasAnnotation("ProductVersion", "2.2.0-rtm-35687")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -42,7 +44,7 @@ namespace NetGram.Migrations
                             ID = 1,
                             Author = "Bob Smith",
                             Description = "a really cool description",
-                            ImageURL = "~/butterfly.jpg",
+                            ImageURL = "tempImage.jpg",
                             Title = "Creative Title 1"
                         },
                         new
@@ -50,7 +52,7 @@ namespace NetGram.Migrations
                             ID = 2,
                             Author = "Sally Smith",
                             Description = "a not cool description",
-                            ImageURL = "~/gummybears.jpg",
+                            ImageURL = "tempImage2.jpg",
                             Title = "Creative Title 2"
                         },
                         new
@@ -58,7 +60,7 @@ namespace NetGram.Migrations
                             ID = 3,
                             Author = "John Smith",
                             Description = "a lame description",
-                            ImageURL = "~/leaf.jpg",
+                            ImageURL = "tempImage3.jpg",
                             Title = "Creative Title 3"
                         },
                         new
@@ -66,7 +68,7 @@ namespace NetGram.Migrations
                             ID = 4,
                             Author = "Jane Smith",
                             Description = "just a description",
-                            ImageURL = "~/station.jpg",
+                            ImageURL = "tempImage4.jpg",
                             Title = "Creative Title 4"
                         },
                         new
@@ -74,7 +76,7 @@ namespace NetGram.Migrations
                             ID = 5,
                             Author = "Billy Smith",
                             Description = "a secret description that if I tell you I have to k*** you ;)",
-                            ImageURL = "~/fairy.jpg",
+                            ImageURL = "tempImage5.jpg",
                             Title = "Creative Title 5"
                         });
                 });

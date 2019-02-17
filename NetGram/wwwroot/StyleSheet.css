@@ -1,0 +1,137 @@
+﻿body 
+{
+    width: 960px;
+    height: 1024px;
+    margin: auto;
+    background-image: url("/Background.jpg");
+    background-repeat: repeat-y;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+}
+
+.mainPgPosts {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+    background-color: beige;
+    height: 350px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.image 
+{
+    margin: auto;
+    margin-top: 5px;
+    height: 55%;
+    width: 55%;
+}
+
+.manageButton {
+    margin-top: 25px;
+    margin-left: 370px;
+    margin-right: 370px;
+    background-color: beige;
+    height: 50px;
+    width: 200px;
+    border: 1px solid black;
+    text-align: center;
+    padding-top: 25px;
+    font-size: x-large;
+    text-decoration: none;
+}
+
+.manageButton:hover {
+    margin-top: 25px;
+    margin-left: 370px;
+    margin-right: 370px;
+    background-color: darkcyan;
+    color: white;
+    height: 50px;
+    width: 200px;
+    border: 1px solid black;
+    text-align: center;
+    padding-top: 25px;
+    font-size: x-large;
+    text-decoration: none;
+}
+
+
+h1 {
+    font-family: 'Coiny', cursive;
+    font-size:3em;
+    text-align: center;
+    padding: 25px;
+    padding-top: 40px;
+    margin-top: 25px;
+    margin-left: 170px;
+    margin-right: 170px;
+    background-color: beige;
+    height: 100px;
+    width: 600px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.detailsLink
+{
+    /*margin-left: auto;*/
+    height: 1em;
+    width: 280px;
+}
+
+.descriptionTag 
+{
+    height: 60px;
+    width: 280px;
+    overflow: scroll;
+}
+
+.addPosts 
+{
+    margin-left: 250px;
+    margin-right: 250px;
+    background-color: beige;
+    height: 400px;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+.form {
+    padding: 5px;
+    margin: 3px;
+    height: 60px;
+    width: 380px;
+}
+.detailPosts {
+    margin-left: 250px;
+    margin-right: 250px;
+    background-color: beige;
+    height: 400px;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.detailform {
+    margin: 3px;
+    height: 20px;
+    width: 380px;
+}
+
+#detaildescriptionTag 
+{
+    height: 60px;
+    width: 380px;
+    overflow: scroll;
+}

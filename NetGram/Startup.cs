@@ -29,8 +29,19 @@ namespace NetGram
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            //services.AddDbContext<NetGramDBContext>(options =>
+            //        options.UseSqlServer(Configuration[("ProductionConnection")]));
+            //services.AddDbContext<NetGramDBContext>(options =>
+            //        options.UseSqlServer(Configuration[("ConnectionStrings:ProductionConnection")]));
             services.AddDbContext<NetGramDBContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("ProductionConnection")));
+            //services.AddDbContext<NetGramDBContext>(options =>
+            //        options.UseSqlServer(Configuration.GetConnectionString("ConnectionStrings:ProductionConnection")));
+            //services.AddDbContext<NetGramDBContext>(options =>
+            //        options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+
+
             services.AddScoped<INetGram, INetGramServices> ();
         }
 

@@ -18,10 +18,11 @@ namespace NetGram.Pages.Posts
             _netgram = netgram;
         }
         [FromRoute]
+        //[BindProperty(SupportsGet =true)]
         public int ID { get; set; }
         public Post Post { get; set; }
 
-        public async void OnGet()
+        public async Task OnGet()
         {
             Post = await _netgram.FindPosts(ID);
         }
