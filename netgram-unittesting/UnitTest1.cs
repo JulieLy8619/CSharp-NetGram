@@ -93,6 +93,7 @@ namespace netgram_unittesting
         {
             DbContextOptions<NetGramDBContext> options = new DbContextOptionsBuilder<NetGramDBContext>().UseInMemoryDatabase("CreatePost").Options;
 
+
             using (NetGramDBContext context = new NetGramDBContext(options))
             {
 
@@ -112,25 +113,114 @@ namespace netgram_unittesting
             }
         }
 
-        //read
+        //read (FindPosts)
         [Fact]
-        public void TestReadinDB()
+        public async void TestReadOneinDB()
         {
+            DbContextOptions<NetGramDBContext> options = new DbContextOptionsBuilder<NetGramDBContext>().UseInMemoryDatabase("ReadPost").Options;
 
+
+            using (NetGramDBContext context = new NetGramDBContext(options))
+            {
+
+                Post testPost10 = new Post();
+                testPost10.ID = 1;
+                testPost10.Title = "aTitle";
+                testPost10.Description = "aDescription";
+                testPost10.ImageURL = ".URL";
+
+                INetGramServices netGramService = new INetGramServices(context);
+
+                await netGramService.Save(testPost10);
+                Post returnedPost1 = await netGramService.FindPosts(testPost10.ID);
+
+                var testPost10Answer = context.PostsTable.FirstOrDefault(a => a.ID == testPost10.ID);
+
+                Assert.Equal(returnedPost1, testPost10Answer);
+            }
+        }
+        //read (GetAllPosts)
+        [Fact]
+        public async void TestReadAllinDB()
+        {
+            DbContextOptions<NetGramDBContext> options = new DbContextOptionsBuilder<NetGramDBContext>().UseInMemoryDatabase("Read2Post").Options;
+
+
+            using (NetGramDBContext context = new NetGramDBContext(options))
+            {
+
+                Post testPost11 = new Post();
+                testPost11.ID = 1;
+                testPost11.Title = "aTitle";
+                testPost11.Description = "aDescription";
+                testPost11.ImageURL = ".URL";
+
+                INetGramServices netGramService = new INetGramServices(context);
+
+                await netGramService.Save(testPost11);
+                var returnedPost2 = await netGramService.GetAllPosts();
+
+                var testPost11Answer = context.PostsTable.FirstOrDefault(a => a.ID == testPost11.ID);
+
+                Assert.Equal(returnedPost2[0], testPost11Answer);
+            }
         }
 
         //update
         [Fact]
-        public void TestUpdateinDB()
+        public async void TestUpdateinDB()
         {
+            DbContextOptions<NetGramDBContext> options = new DbContextOptionsBuilder<NetGramDBContext>().UseInMemoryDatabase("UpdatePost").Options;
 
+
+            using (NetGramDBContext context = new NetGramDBContext(options))
+            {
+
+                Post testPost12 = new Post();
+                testPost12.ID = 1;
+                testPost12.Title = "aTitle";
+                testPost12.Description = "aDescription";
+                testPost12.ImageURL = ".URL";
+
+                INetGramServices netGramService = new INetGramServices(context);
+
+                await netGramService.Save(testPost12);
+                testPost12.Title = "NEWTitle";
+                await netGramService.Save(testPost12);
+                var returnedPost3 = await netGramService.FindPosts(1);
+
+                var testPost12Answer = context.PostsTable.FirstOrDefault(a => a.ID == testPost12.ID);
+
+                Assert.Equal("NEWTitle", testPost12Answer.Title);
+            }
         }
 
         //delete
         [Fact]
-        public void TestDeleteinDB()
+        public async void TestDeleteinDB()
         {
+            DbContextOptions<NetGramDBContext> options = new DbContextOptionsBuilder<NetGramDBContext>().UseInMemoryDatabase("DeletePost").Options;
 
+
+            using (NetGramDBContext context = new NetGramDBContext(options))
+            {
+
+                Post testPost13 = new Post();
+                testPost13.ID = 1;
+                testPost13.Title = "aTitle";
+                testPost13.Description = "aDescription";
+                testPost13.ImageURL = ".URL";
+
+                INetGramServices netGramService = new INetGramServices(context);
+
+                await netGramService.Save(testPost13);
+
+                await netGramService.Delete(1);
+
+                var testPost13Answer = context.PostsTable.FirstOrDefault(a => a.ID == testPost13.ID);
+
+                Assert.Null(testPost13Answer);
+            }
         }
     }
 }
