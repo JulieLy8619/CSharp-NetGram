@@ -16,15 +16,16 @@
     <body>
         <h1>Post Details</h1>
         <a class="manageButton" asp-page="/Index">Home</a>
-        <div>
-            <label asp-for="Post.Title"></label>
-            <label asp-for="Post.Title">@Model.Post.Title</label>
+        <div class="detailPosts">
+            <img class="image" src="@Model.Post.ImageURL" alt="@Model.Post.Title" />
+            @*<label asp-for="Post.Title"></label>*@
+            <label class="detailform" asp-for="Post.Title">@Model.Post.Title</label>
 
-            <label asp-for="Post.Author"></label>
-            <label asp-for="Post.Author">@Model.Post.Author</label>
+            @*<label asp-for="Post.Author"></label>*@
+            <label class="detailform" asp-for="Post.Author">@Model.Post.Author</label>
 
-            <label asp-for="Post.Description"></label>
-            <label asp-for="Post.Description">@Model.Post.Description</label>
+            @*<label class="detailform" asp-for="Post.Description"></label>*@
+            <label id="detaildescriptionTag" asp-for="Post.Description">@Model.Post.Description</label>
 
             <a asp-page="/Posts/Manage" asp-route-id="@Model.Post.ID">EDIT</a>
         </div>

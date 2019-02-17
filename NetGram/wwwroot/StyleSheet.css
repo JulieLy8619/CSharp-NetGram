@@ -96,21 +96,42 @@ h1 {
 {
     margin-left: 250px;
     margin-right: 250px;
-    /*margin-top: 12px;*/
     background-color: beige;
     height: 400px;
     width: 400px;
     border: 1px solid black;
     border-radius: 5px;
     padding: 5px;
-    /*display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: center;*/
 }
 .form {
     padding: 5px;
     margin: 3px;
     height: 60px;
     width: 380px;
+}
+.detailPosts {
+    margin-left: 250px;
+    margin-right: 250px;
+    background-color: beige;
+    height: 400px;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.detailform {
+    margin: 3px;
+    height: 20px;
+    width: 380px;
+}
+
+#detaildescriptionTag 
+{
+    height: 60px;
+    width: 380px;
+    overflow: scroll;
 }
