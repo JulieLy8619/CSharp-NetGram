@@ -1,30 +1,33 @@
 # Lab14_15-NetGram
+We were asked to create a website similar to InstaGram, where a user could add/update Post. A Post includes an image, the author or username, and a description.
+
+You can find my application at: https://jlynetgram2.azurewebsites.net
+
+## Solution
+Here is an example of the "Home" page, where one would see all the entries: 
+![HomePage](./images/netgramHome.JPG)
+Here is an example of the adding page, where you choose your image file, and fill out the form: 
+![AddOrEditPage](./images/netgramEdit.JPG)
+Here is an example of the details page, where you can view the specific details of the post: 
+![DetailsPage](./images/netgramDetails.JPG)
+
+## Design
+For the Design, I chose to have all the images on the main/home page. Then have two other pages, one for viewing the details, and one for adding/editing a post.
+I also utilized Dependency Injection for a buffer between the program and the Database.
+I used one class for my objects, essentially the Post object, which contained the information like Author, Description, and URL link.
+
+## Technologies
+I utilized the following technogies: 
+- Razor Pages (to create the site)
+- Azure Blob (to store images)
+- Azure Application (to deploy the site)
+- VS Xunit (for testing)
+
+## Recognition
+Used Pixabay for all images on my site
+
 
 <!--
-https://jlynetgram2.azurewebsites.net
-time tracking for submission: 
-10-1:30 wednesday
-945- 200 thursday
-5:30-8:30 thrusday
-430 to  saturday, this was on and off cuz of chats
-
-Your README should contain:
-
-Introduction to the app (3 -5 sentences)
-How to use
-Screenshots of the application (2 or 3 good images with captions/explanations)
-Deployment link (top of the README, please)
-Technologies used
-Architectural Design
-Any additional important information…
-
-information for problem to talk about with amanda 2-15-19
-everything works fine and normal on local
-when i switch to production but running from VS I can edit 2-3 times and then it errors our
-we tried deleting and starting over the DB 3 times including removing and creating new publishes
-currently on deployed production i can get to my landing main page but I can't venture outside of it (like click to view details of one of the items)
-
-
-used pixabay for all images
+spent about 14.5 hours to complete this assignment
 -->
 
