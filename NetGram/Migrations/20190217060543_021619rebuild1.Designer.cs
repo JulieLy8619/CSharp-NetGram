@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NetGram.Data;
 
 namespace NetGram.Migrations
 {
     [DbContext(typeof(NetGramDBContext))]
-    partial class NetGramDBContextModelSnapshot : ModelSnapshot
+    [Migration("20190217060543_021619rebuild1")]
+    partial class _021619rebuild1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

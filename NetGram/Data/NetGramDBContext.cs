@@ -30,7 +30,7 @@ namespace NetGram.Data
                     Title = "Creative Title 2",
                     Author = "Sally Smith",
                     Description = "a not cool description",
-                    ImageURL = "tempImage2.jpg"
+                    ImageURL = "~/gummybears.jpg"
                 },
                 new Post
                 {
@@ -38,7 +38,7 @@ namespace NetGram.Data
                     Title = "Creative Title 3",
                     Author = "John Smith",
                     Description = "a lame description",
-                    ImageURL = "tempImage3.jpg"
+                    ImageURL = "~/leaf.jpg"
                 }, 
                 new Post
                 {
@@ -46,7 +46,7 @@ namespace NetGram.Data
                     Title = "Creative Title 4",
                     Author = "Jane Smith",
                     Description = "just a description",
-                    ImageURL = "tempImage4.jpg"
+                    ImageURL = "~/station.jpg"
                 },
                 new Post
                 {
@@ -54,7 +54,7 @@ namespace NetGram.Data
                     Title = "Creative Title 5",
                     Author = "Billy Smith",
                     Description = "a secret description that if I tell you I have to k*** you ;)",
-                    ImageURL = "tempImage5.jpg"
+                    ImageURL = "~/fairy.jpg"
                 }
                 );
         }

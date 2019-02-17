@@ -14,27 +14,28 @@
     </head>
 
     <body>
-    <a asp-page="/Index">Home</a>
-    <h1>Manage the Posts</h1>
-    <form method="post" enctype="multipart/form-data">
+        <h1>Manage the Posts</h1>
+        <a class="manageButton" asp-page="/Index">Home</a>
+        <form method="post" enctype="multipart/form-data">
+            <div class="addPosts">
+                <label asp-for="Image"></label>
+                <input class="form" asp-for="Image" type="file" />
 
-        <label asp-for="Image"></label>
-        <input asp-for="Image" type="file" />
+                <label asp-for="Post.Title"></label>
+                <input class="form" asp-for="Post.Title" />
 
-        <label asp-for="Post.Title"></label>
-        <input asp-for="Post.Title" />
+                <label asp-for="Post.Author"></label>
+                <input class="form" asp-for="Post.Author" />
 
-        <label asp-for="Post.Author"></label>
-        <input asp-for="Post.Author" />
+                <label asp-for="Post.Description"></label>
+                <textarea class="form" asp-for="Post.Description"></textarea>
 
-        <label asp-for="Post.Description"></label>
-        <textarea asp-for="Post.Description"></textarea>
-
-        @*<label asp-for="Post.ImageURL"></label>
+                @*<label asp-for="Post.ImageURL"></label>
             <textarea asp-for="Post.ImageURL"></textarea>*@
 
-        <button type="submit">Save</button>
-        <button type="submit" asp-page-handler="Delete">DELETE</button>
-    </form>
+                <button type="submit">Save</button>
+                <button type="submit" asp-page-handler="Delete">DELETE</button>
+                </div>
+        </form>
     </body>
 </html>
