@@ -55,7 +55,7 @@ namespace NetGram.Pages.Posts
                     await Image.CopyToAsync(stream);
                 }
 
-                var container = await BlobImg.GetContainer("NetGramImagesContainer");
+                var container = await BlobImg.GetContainer("netgramimagescontainer");
 
                 BlobImg.AddBlob(Image.FileName, container, filePath);
 
