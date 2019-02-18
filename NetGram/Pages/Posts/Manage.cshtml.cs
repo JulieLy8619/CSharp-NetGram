@@ -34,10 +34,19 @@ namespace NetGram.Pages.Posts
 
         public Blob BlobImg { get; set; }
 
+        /// <summary>
+        /// gets the post or creates a new one
+        /// </summary>
+        /// <returns>returns to the page with the object information</returns>
         public async Task OnGet()
         {
             Post = await _netgram.FindPosts(ID.GetValueOrDefault()) ?? new Post();
         }
+
+        /// <summary>
+        /// creates or updates a post
+        /// </summary>
+        /// <returns>returns to the details page with the object's information</returns>
         public async Task<IActionResult> OnPost()
         {
             var tempPost = await _netgram.FindPosts(ID.GetValueOrDefault()) ?? new Post();
@@ -67,6 +76,10 @@ namespace NetGram.Pages.Posts
             return RedirectToPage("/Posts/Index", new { id = tempPost.ID});
         }
 
+        /// <summary>
+        /// deletes a post
+        /// </summary>
+        /// <returns>returns to the main page after the delete is complete</returns>
         public async Task<IActionResult> OnPostDelete()
         {
             await _netgram.Delete(ID.Value);
